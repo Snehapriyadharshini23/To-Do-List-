@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do-List</h1>
+    <nav class="menu">
+      <button data-section="add">➕ Add Task</button>
+      <button data-section="pending">🟠 Pending</button>
+      <button data-section="completed">🔵 Completed</button>
+      <button data-section="delete">❌ Delete</button>
+    </nav>
+
+    <!-- Sections -->
+    <section id="add" class="content-section active">
+      <h2>Add a New Task</h2>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter task" required>
+        <input type="date" id="deadline-input" required>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section id="pending" class="content-section">
+      <h2>Pending Tasks</h2>
+      <ul id="pending-list"></ul>
+    </section>
+
+    <section id="completed" class="content-section">
+      <h2>Completed Tasks</h2>
+      <ul id="completed-list"></ul>
+    </section>
+
+    <section id="delete" class="content-section">
+      <h2>Delete Tasks</h2>
+      <ul id="delete-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
